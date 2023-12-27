@@ -1,2 +1,1 @@
-# Suckless
-Personal Suckless software configs
+Just my local arch VM configs
