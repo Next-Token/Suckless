@@ -1,5 +1,22 @@
 /* See LICENSE file for copyright and license details. */
 
+/*TODO: fullgaps patch*/
+/*
+https://dwm.suckless.org/patches/fullgaps/
+
+dwm-fullgaps-6.4.diff (https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.4.diff)
+source code and instructions for "patch" program (merge code into existing files)
+
+
+(check the file and see where conflict exists)
+run: patch < dwm-fullgaps-6.4.diff
+vim def.config.rej (manually patch shiftview controls)
+
+
+
+*/
+
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -11,7 +28,7 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_cyan[]        = "#ff7700";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -61,7 +78,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
 
-#include "shiftview.c"
+#include "shiftview.c" /* PAtch shiftview  */
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -85,10 +102,10 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY, 			XK_n,	   shiftview,	   {.i = +1 } },
-	{ MODKEY,			XK_b, 	   shiftview,	   {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } }, /**/
+	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } }, /**/
+	{ MODKEY, 						XK_n,	   shiftview,	   {.i = +1 } }, /*Shiftview right*/
+	{ MODKEY,						XK_b, 	   shiftview,	   {.i = -1 } }, /*Shiftview left*/
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
