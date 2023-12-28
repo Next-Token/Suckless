@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-
+/*https://youtu.be/80FISSjYYrk?si=jA_DEAngqYV2rFFy*/
 /*TODO: fullgaps patch*/
 /*
 https://dwm.suckless.org/patches/fullgaps/
