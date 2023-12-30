@@ -1,6 +1,21 @@
 /* See LICENSE file for copyright and license details. */
 /*https://youtu.be/80FISSjYYrk?si=jA_DEAngqYV2rFFy*/
+
+
+
 /*TODO: fullgaps patch*/
+
+
+/*TODO: define xResources file to establish a color scheme
+		set vim to use colors from .xresources
+
+
+!!!!!!CLONES LUKESMITH REPO for ST. maybe dwm!!!!!!!!!!!!
+
+
+
+
+*/
 /*
 https://dwm.suckless.org/patches/fullgaps/
 
